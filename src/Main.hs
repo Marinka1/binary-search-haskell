@@ -17,4 +17,9 @@ binarysearch x sortedList l r
 
 
 main = do
-  putStrLn "hello world"
+  let numbers = [1..100]
+  putStrLn "enter a value to find: "
+  inputX <- getLine
+  putStrLn (show numbers)
+  let x = (read inputX :: Int)
+  putStrLn (show (binarysearch x numbers 0 ((length numbers)-1)))
